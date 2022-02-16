@@ -42,6 +42,9 @@ colorscheme murphy      " good colorschemes: murphy, slate, molokai, badwolf, so
 syntax enable
 filetype plugin indent on
 
+" Specific highlighting
+au BufNewFile,BufRead Jenkinsfile setf groovy
+
 
 """" Tab settings
 
@@ -66,5 +69,9 @@ nnoremap <CR> :nohlsearch<CR><CR>
 """" Miscellaneous settings that might be worth enabling
 
 "set cursorline         " highlight current line
-"set background=dark    " configure Vim to use brighter colors
-"set autoread           " autoreload the file in Vim if it has been changed outside of Vim
+set background=dark    " configure Vim to use brighter colors
+set autoread           " autoreload the file in Vim if it has been changed outside of Vim
+
+""" Sony
+noremap <Space> viw
+inoremap <S-CR> <Esc>
